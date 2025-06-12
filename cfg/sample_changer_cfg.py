@@ -15,6 +15,12 @@ Mod('robot_io',  # the name of the module # type: ignore
     uri='tcp://192.168.3.5:29999', 
     #uri='tcp://localhost:29999', 
 )    
+
+Mod('move_robot',  # type: ignore
+    'frappy_HZB.ros2_demo_module.MoveRobotModule',
+    'Module to move robot via ROS2 service',
+    pollinterval=1,
+)
     
 Mod('hardware', # type: ignore
     'frappy_HZB.hardware.hardware',
